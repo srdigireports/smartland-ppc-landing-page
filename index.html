@@ -198,10 +198,8 @@ header.top img{height:40px;width:auto}
 
 /* Reviews */
 .reviews{background:var(--sand)}
-.rev-box{max-width:760px;margin:0 auto;background:#fff;border-radius:var(--radius);padding:38px 28px;text-align:center;box-shadow:var(--shadow);border-top:8px solid var(--terra)}
-.stars{color:#E8A317;font-size:1.8rem;letter-spacing:4px}
-.rev-box p{margin:12px 0 22px;color:var(--muted)}
-/* TESTIMONIAL SLOT: when the client supplies real Google reviews, add .tcard blocks here */
+.rev-title{margin:0 0 26px}
+.rev-widget{min-height:220px}
 
 /* FAQ */
 .faq{max-width:860px;margin:0 auto;display:grid;gap:12px}
@@ -789,16 +787,14 @@ window.SL = {
   </div>
 </section>
 
-<!-- REVIEWS (no fabricated testimonials: link to real Google reviews) -->
+<!-- REVIEWS: live Google reviews widget (Trustindex), same one used on the main Smartland site.
+     Per centre: swap the ID after loader.js? for that centre's Trustindex widget. -->
 <section class="sec reviews">
   <div class="wrap">
-    <div class="rev-box">
-      <div class="stars" aria-hidden="true">★★★★★</div>
-      <h2 style="margin-top:8px">What <span data-sl="centre"></span> families say</h2>
-      <p>Read honest reviews from local parents on Google before you visit.</p>
-      <a class="btn btn-terra" data-sl-href="reviewsUrl" target="_blank" rel="noopener" data-evt="click_google_reviews">Read our Google reviews →</a>
+    <h2 class="rev-title">What <span data-sl="centre"></span> families say</h2>
+    <div class="rev-widget">
+      <script defer async src="https://cdn.trustindex.io/loader.js?522afba850fb48952a560b08e61"></script>
     </div>
-    <!-- Add real, permissioned Google review cards here once the client supplies them -->
   </div>
 </section>
 
